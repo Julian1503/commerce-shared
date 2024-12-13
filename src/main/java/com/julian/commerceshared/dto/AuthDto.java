@@ -9,8 +9,13 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 public class AuthDto {
     private String token;
     private String email;
+
+    /**
+     * Default constructor for AuthDto.
+     */
+    public AuthDto() {
+    }
 }

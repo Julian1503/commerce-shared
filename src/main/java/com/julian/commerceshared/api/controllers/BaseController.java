@@ -12,7 +12,7 @@ public class BaseController {
    * Create success response
    * @param response  it can be any object that needs to be returned
    * @param message   message to be returned
-   * @return ResponseEntity<BaseResponse>
+   * @return ResponseEntity&lt;BaseResponse&gt;
    */
   protected ResponseEntity<BaseResponse> createSuccessResponse(Object response, String message) {
     BaseResponse baseResponse = new BaseResponse();
@@ -25,7 +25,7 @@ public class BaseController {
   /**
    * Create error response
    * @param errorMessage  error message to be returned
-   * @return ResponseEntity<BaseResponse>
+   * @return ResponseEntity&lt;BaseResponse&gt;
    */
   protected ResponseEntity<BaseResponse> createErrorResponse(String errorMessage) {
     BaseResponse baseResponse = new BaseResponse();

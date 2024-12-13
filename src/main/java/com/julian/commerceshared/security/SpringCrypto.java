@@ -14,6 +14,9 @@ public class SpringCrypto {
   private static final String SALT = "2fa9ecbb0a3388a9";
   private static final String SAFE_STRING = "ff95f85b2e5d6d7a7421c74d1078049a6bb7a0adb4c36aa3fbf23fb";
 
+  /**
+   * Default constructor for AuthDto.
+   */
   private SpringCrypto() {
     throw new IllegalStateException("This should not be implemented.");
   }

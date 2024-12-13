@@ -48,4 +48,12 @@ public class BaseResponse {
     public void setSuccess(boolean success) {
         this.success = success;
     }
+
+    /**
+     * Set error response
+     * @param errorResponse set a list of error messages
+     */
+    public void setErrorResponse(List<String> errorResponse) {
+        this.errorResponse = errorResponse;
+    }
 }
