@@ -3,6 +3,12 @@ package com.julian.commerceshared.security;
 import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.security.crypto.encrypt.TextEncryptor;
 
+
+/**
+ * SpringCrypto class for encrypt
+ * and decrypt text.
+ */
+
 public class SpringCrypto {
 
   private static final String SALT = "2fa9ecbb0a3388a9";
@@ -12,6 +18,11 @@ public class SpringCrypto {
     throw new IllegalStateException("This should not be implemented.");
   }
 
+  /**
+   * Encrypts a text.
+   * @param textToEncrypt text to encrypt
+   * @return encrypted text
+   */
   public static String encrypt(String textToEncrypt) {
     if (textToEncrypt == null) {
       throw new IllegalStateException("Text to encrypt cannot be null.");
@@ -22,6 +33,11 @@ public class SpringCrypto {
     }
   }
 
+  /**
+   * Decrypts a text.
+   * @param encryptedText encrypted text
+   * @return decrypted text
+   */
   public static String decrypt(String encryptedText) {
     if (encryptedText == null) {
       throw new IllegalStateException("Text to decrypt cannot be null.");
