@@ -10,8 +10,7 @@ import java.util.List;
  * Base response class
  */
 
-@AllArgsConstructor
-@NoArgsConstructor
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BaseResponse {
     private Object response;
@@ -19,6 +18,67 @@ public class BaseResponse {
     private String message;
     private boolean success = true;
     private List<String> errorResponse;
+
+    /**
+     * Constructor
+     */
+    public BaseResponse() {}
+
+    /**
+     * Constructor
+     * @param response response object
+     * @param status http status
+     * @param message message
+     * @param success success
+     * @param errorResponse error response
+     */
+    public BaseResponse(Object response, int status, String message, boolean success, List<String> errorResponse) {
+        this.response = response;
+        this.status = status;
+        this.message = message;
+        this.success = success;
+        this.errorResponse = errorResponse;
+    }
+
+    /**
+     * Get response
+     * @return Object
+     */
+    public Object getResponse() {
+        return response;
+    }
+
+    /**
+     * Get status
+     * @return int
+     */
+    public int getStatus() {
+        return status;
+    }
+
+    /**
+     * Get message
+     * @return String
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * Get success
+     * @return boolean
+     */
+    public boolean isSuccess() {
+        return success;
+    }
+
+    /**
+     * Get error response
+     * @return List&lt;String&gt;
+     */
+    public List<String> getErrorResponse() {
+        return errorResponse;
+    }
 
     /**
      * Set response

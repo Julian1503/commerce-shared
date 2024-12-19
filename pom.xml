@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.julian1503</groupId>
     <artifactId>shared-module</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.8</version>
     <packaging>jar</packaging>
     <name>Shared Module</name>
     <description>A shared module for common functionalities</description>

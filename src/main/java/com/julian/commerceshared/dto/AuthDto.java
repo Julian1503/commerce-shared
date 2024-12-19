@@ -1,14 +1,8 @@
 package com.julian.commerceshared.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 /**
  * AuthDto class
  */
-@Data
-@AllArgsConstructor
 public class AuthDto {
     private String token;
     private String email;
@@ -17,5 +11,31 @@ public class AuthDto {
      * Default constructor for AuthDto.
      */
     public AuthDto() {
+    }
+
+    /**
+     * Constructor for AuthDto.
+     * @param token user's token
+     * @param email user's email
+     */
+    public AuthDto(String token, String email) {
+        this.token = "Bearer " + token;
+        this.email = email;
+    }
+
+    /**
+     * Get the token.
+     * @return String
+     */
+    public String getToken() {
+        return this.token;
+    }
+
+    /**
+     * Get the email.
+     * @return String
+     */
+    public String getEmail() {
+        return this.email;
     }
 }

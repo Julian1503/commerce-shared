@@ -32,6 +32,6 @@ public class BaseController {
     baseResponse.setStatus(HttpStatus.BAD_REQUEST.value());
     baseResponse.setSuccess(false);
     baseResponse.setMessage(errorMessage);
-    return ResponseEntity.ok(baseResponse);
+    return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Content-Type","application/json").body(baseResponse);
   }
 }
